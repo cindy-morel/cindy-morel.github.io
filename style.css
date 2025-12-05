@@ -35,9 +35,9 @@ header .logo a img{
   max-width: 25%;
 }
 
-.eletop{
+header .eletop{
   max-width: 253px;
-  float:right
+  float:right !important
 }
 
 header .eletop .escudo{
@@ -62,7 +62,7 @@ header .eletop .search{
   align-items: stretch;
   width: 100%;
 }
-.eletop .search .input_group input{
+header .eletop .search .input_group input{
   border-color: #e22;
   font-weight: normal;
   font-size: 12px;
@@ -72,6 +72,18 @@ header .eletop .search{
   border-radius: 2px 0 0 2px;
   background: #fff;
   border: solid 1px #e22;
+}
+
+.input_group>.form-group{
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.form-group{
+  display: block;
 }
 
 header .eletop .search .input_group button{
@@ -115,6 +127,10 @@ header .eletop .buscador ul li a{
   text-align: left;
   text-transform: uppercase;
   color: #667;
+}
+
+.buscador ul li a i{
+  width: 3em;
 }
 
 .mi_img{
@@ -179,6 +195,18 @@ header .eletop .buscador ul li a{
   color: #024;
   background-color: #fff;
 } 
+
+.menu ul li a::before{
+  position: absolute;
+  background-color: #e22;
+  content: " ";
+  width: 0%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: ease .3s;
+}
 
 /*-----------slider----------------*/
 .slider{
@@ -770,3 +798,136 @@ footer .footer-info ul li a::before{
   content: " | ";
   margin: 0 5px;
 }
+
+/*----------------about us-pic----------------------*/
+
+.pic{
+  min-height: 336px;
+  width: 100%;
+  background-image: url(imagenes-inicio/palacio.png);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  
+}
+
+.pic::before{
+  content: " ";
+  position: absolute;
+  background: #ee2a2499;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/*------------------msin contain------------------*/
+
+.morsection{
+margin: 25px 0;
+position: sticky;
+top: 25px;
+z-index: 9;
+background-color: #fff;
+border-radius: 4px;
+}
+
+.morsection h3{
+  border-radius: 4px 4px 0px 0px;
+  background: rgba(0, 47, 135, .05);
+  margin: 0;
+  padding: 23px 25px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1;
+  text-align: left;
+  color: #037;
+  border-color: #037;
+  border-bottom: 1px solid #027;
+}
+
+.morsection .cont_main{
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 12px;
+}
+
+.morsection .cont_main ul{
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.morsection .cont_main ul li{
+  display: block;
+  margin-bottom: 2px;
+}
+
+.morsection .cont_main ul .active a{
+  color: #fff;
+  border-radius: 4px;
+  background: #e22;
+  text-decoration: none;
+}
+
+.morsection .cont_main ul li a{
+  display: block;
+  color: #000;
+  font-size: 17px;
+  position: relative;
+  line-height: 1;
+  padding: 14px;
+}
+
+.morsection .cont_main ul li a:hover{
+  background: #e22;
+  color: #fff;
+}
+
+/*----------------escrito-----------------*/
+
+.escrito{
+  background-color: #fff;
+  margin: 25px 0 50px 0;
+  border-radius: 4px;
+  padding: 30px;
+  min-height: 700px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+  text-align: left;
+  color: #000;
+}
+
+.bread span{
+  display: inline-block;
+  font-size: 14px;
+  color: #667;
+}
+
+.bread span a{
+  display: inline-flex;
+}
+
+.bread a{
+  color: #667;
+}
+
+.escrito .titu_main{
+  margin: 20px;
+  font-size: 31px;
+  text-align: left;
+  color: #000;
+}
+
+.escrito .control{
+height: 45px;
+padding: 7px 0;
+border: 1px solid rgba(112, 112, 112, .15);
+border-left: transparent;
+border-right: transparent;
+margin-bottom: 27px;
+}
+

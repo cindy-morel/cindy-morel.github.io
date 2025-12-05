@@ -18,6 +18,8 @@ img{
   border-style: none;
 }
 
+
+
 .container{
   max-width: 1140px;
 }
@@ -71,7 +73,7 @@ img{
 }
 
 .row{
-  display:flex;
+  display:flex !important;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
@@ -87,6 +89,9 @@ img{
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .col-50{
@@ -103,6 +108,12 @@ img{
   flex: 0 0 25%;
   max-width: 25%;
 }
+
+.col-75{
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
 
 .encabezado .n-title{
   font-weight: 900px;
